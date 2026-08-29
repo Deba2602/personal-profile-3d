@@ -14,7 +14,7 @@ export const profile = {
 
 export const targetRoles = [
   "Data Scientist",
-  "Senior / Lead Data Scientist",
+  "Associate Lead Data Scientist",
   "ML Engineer",
   "AI Engineer",
   "Generative AI Engineer",

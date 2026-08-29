@@ -101,34 +101,68 @@ a,
 /* ── DD Monogram Animation ── */
 .brand-mark__monogram {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   place-items: center;
-  width: 2.8rem;
-  height: 2.8rem;
+  width: 3.2rem;
+  height: 3.2rem;
   border-radius: 50%;
-  border: 1px solid rgba(124, 246, 216, 0.4);
-  background: rgba(124, 246, 216, 0.08);
-  color: var(--accent);
-  font-weight: 700;
-  font-size: 0.9rem;
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  transition: border-color 300ms ease, box-shadow 300ms ease;
-  animation: monogramPulse 4s ease-in-out infinite;
+  background: var(--bg-secondary);
+  box-shadow: 0 0 20px rgba(124, 246, 216, 0.15);
+  transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.brand-mark__monogram::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: conic-gradient(
+    from 0deg,
+    var(--accent) 0%,
+    transparent 40%,
+    transparent 60%,
+    var(--accent-secondary) 100%
+  );
+  animation: borderSpin 4s linear infinite;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.brand-mark__monogram::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: var(--bg);
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .brand-mark__monogram:hover {
-  border-color: rgba(124, 246, 216, 0.8);
-  box-shadow:
-    0 0 20px rgba(124, 246, 216, 0.3),
-    0 0 40px rgba(124, 246, 216, 0.1);
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(124, 246, 216, 0.3);
+}
+
+.brand-mark__monogram .dd-chars {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 2px;
+  font-family: "Instrument Serif", serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -1px;
 }
 
 .dd-char {
   display: inline-block;
+  background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   animation: ddFloat 3s ease-in-out infinite;
-  transition: transform 200ms ease, color 200ms ease;
+  transition: filter 300ms ease;
+  filter: drop-shadow(0 0 8px rgba(124, 246, 216, 0.4));
 }
 
 .dd-char:nth-child(1) {
@@ -136,17 +170,11 @@ a,
 }
 
 .dd-char:nth-child(2) {
-  animation-delay: 0.3s;
+  animation-delay: 1.5s; /* Offset for a wave effect */
 }
 
-.brand-mark__monogram:hover .dd-char:nth-child(1) {
-  transform: translateY(-2px) scale(1.15);
-  color: var(--accent-tertiary);
-}
-
-.brand-mark__monogram:hover .dd-char:nth-child(2) {
-  transform: translateY(2px) scale(1.15);
-  color: var(--accent-secondary);
+.brand-mark__monogram:hover .dd-char {
+  filter: drop-shadow(0 0 12px rgba(124, 246, 216, 0.8));
 }
 
 @keyframes ddFloat {
@@ -154,18 +182,16 @@ a,
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
   }
 }
 
-@keyframes monogramPulse {
-  0%, 100% {
-    box-shadow: 0 0 0 0 rgba(124, 246, 216, 0);
-    border-color: rgba(124, 246, 216, 0.4);
+@keyframes borderSpin {
+  from {
+    transform: rotate(0deg);
   }
-  50% {
-    box-shadow: 0 0 16px 2px rgba(124, 246, 216, 0.15);
-    border-color: rgba(124, 246, 216, 0.6);
+  to {
+    transform: rotate(360deg);
   }
 }
 
