@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Debapratim Deka - Senior Data Scientist building ML systems, forecasting engines, and LLM applications for high-impact business decisions."
+      content="Debapratim Deka — Data Scientist & AI Engineer building production-grade ML systems, GenAI platforms, agentic AI solutions, and LLM applications for high-impact business decisions."
     />
     <meta
       name="keywords"
-      content="Debapratim Deka, data scientist, machine learning, deep learning, LLM, forecasting, portfolio"
+      content="Debapratim Deka, data scientist, AI engineer, machine learning, deep learning, LLM, GenAI, agentic AI, ML engineer, generative AI, forecasting, RAG, multi-agent systems, portfolio"
     />
     <meta name="theme-color" content="#07111f" />
-    <title>Debapratim Deka | 3D ML Profile</title>
+    <title>Debapratim Deka | Data Scientist & AI Engineer — 3D Profile</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,12 +22,18 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
+    <div class="scroll-progress-bar" id="scroll-progress" aria-hidden="true"></div>
     <canvas id="network-canvas" aria-hidden="true"></canvas>
 
     <div class="page-shell">
       <header class="site-header">
         <a class="brand-mark" href="#top" aria-label="Debapratim Deka home">
-          <span class="brand-mark__monogram">DD</span>
+          <span class="brand-mark__monogram" id="dd-monogram">
+            <span class="dd-chars">
+              <span class="dd-char" data-char="D">D</span>
+              <span class="dd-char" data-char="D">D</span>
+            </span>
+          </span>
           <span class="brand-mark__text">Debapratim Deka</span>
         </a>
 
@@ -42,21 +48,46 @@
       <main id="top">
         <section class="hero section">
           <div class="hero__copy">
-            <p class="eyebrow">Senior Data Scientist | ML Systems | LLM Applications</p>
+            <p class="eyebrow">
+              <span id="role-typewriter" aria-label="Data Scientist & AI Engineer"></span>
+              <span class="typewriter-cursor" aria-hidden="true">|</span>
+            </p>
             <h1>
-              Building intelligent products where
+              Building intelligent systems where
               <span class="highlight-text">data becomes decisions</span>.
             </h1>
             <p class="hero__lede">
-              I design production-grade analytics, forecasting, and GenAI systems that
-              connect business context, model rigor, and explainable execution. My work
-              sits at the intersection of machine learning, deep learning, retrieval, and
-              real-world product impact.
+              I architect and productionize ML, GenAI, LLM, and Agentic AI solutions
+              across enterprise use cases — from RAG and multi-agent orchestration to
+              NL-to-SQL automation and cloud-native AI platforms. My work sits at the
+              intersection of AI engineering, deep learning, and real-world product impact.
             </p>
 
             <div class="hero__actions">
-              <a class="button button--primary" href="mailto:debapratimdeka2001@gmail.com">
+              <a
+                class="button button--primary"
+                href="https://www.linkedin.com/in/debapratim-deka/"
+                target="_blank"
+                rel="noreferrer"
+                id="start-conversation-btn"
+              >
+                <svg class="button-icon" viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
                 Start a Conversation
+              </a>
+              <a
+                class="button button--download"
+                href="./Deba_Resume_20261029_v2.pdf"
+                download
+                id="download-resume-btn"
+              >
+                <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
+                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Download Resume
               </a>
               <a class="button button--ghost" href="#experience">Explore Profile</a>
             </div>
@@ -68,7 +99,7 @@
               <li>
                 <a href="mailto:debapratimdeka2001@gmail.com">debapratimdeka2001@gmail.com</a>
               </li>
-              <li><a href="tel:+918634564246">+91 86345 64246</a></li>
+              <li><a href="tel:+918638454246">+91 8638454246</a></li>
             </ul>
           </div>
 
@@ -76,35 +107,35 @@
             <div class="hero-cube">
               <div class="hero-cube__face hero-cube__face--front">
                 <p class="face-label">Profile Signal</p>
-                <h2>ML-first thinking</h2>
+                <h2>AI-first thinking</h2>
                 <p>
-                  Forecasting pipelines, GenAI systems, and business-impact analytics,
+                  Agentic AI platforms, GenAI pipelines, and production ML systems,
                   designed to scale.
                 </p>
               </div>
               <div class="hero-cube__face hero-cube__face--right">
-                <p class="face-label">Deep Learning</p>
+                <p class="face-label">LLM Engineering</p>
                 <p>
-                  Fine-tuned transformer workflows, RAG architectures, and knowledge-aware
-                  reasoning.
+                  Multi-agent orchestration, RAG architectures, NL-to-SQL, and
+                  knowledge-aware reasoning.
                 </p>
               </div>
               <div class="hero-cube__face hero-cube__face--top">
                 <p class="face-label">Delivery</p>
-                <p>Structured experimentation, production execution, measurable results.</p>
+                <p>Cloud-native AI, Kubernetes, CI/CD, and measurable business results.</p>
               </div>
             </div>
 
             <div class="floating-stat floating-stat--one">
-              <span class="floating-stat__value">20%</span>
-              <span class="floating-stat__label">revenue lift delivered</span>
+              <span class="floating-stat__value" data-count-target="20" data-count-suffix="%">0%</span>
+              <span class="floating-stat__label">revenue surge delivered</span>
             </div>
             <div class="floating-stat floating-stat--two">
-              <span class="floating-stat__value">10M+</span>
+              <span class="floating-stat__value" data-count-target="10" data-count-suffix="M+">0M+</span>
               <span class="floating-stat__label">reviews processed</span>
             </div>
             <div class="floating-stat floating-stat--three">
-              <span class="floating-stat__value">100K+</span>
+              <span class="floating-stat__value" data-count-target="100" data-count-suffix="K+">0K+</span>
               <span class="floating-stat__label">SKUs modeled</span>
             </div>
           </div>
@@ -126,19 +157,19 @@
               </p>
             </article>
             <article class="glass-panel reveal">
-              <h3>LLM thinking</h3>
+              <h3>Agentic AI thinking</h3>
               <p>
-                For LLM applications, I focus on grounded intelligence rather than novelty
-                alone, combining retrieval, structured knowledge, and evaluation to make
-                outputs useful, reliable, and decision-ready.
+                For AI applications, I focus on grounded intelligence — combining
+                multi-agent orchestration, retrieval, structured knowledge, and
+                evaluation to make outputs useful, reliable, and decision-ready.
               </p>
             </article>
             <article class="glass-panel reveal">
-              <h3>Recruiter signal</h3>
+              <h3>AI Engineering depth</h3>
               <p>
                 My profile blends research curiosity with delivery discipline: scalable
-                analytics, stakeholder alignment, and measurable outcomes across consumer
-                health, beverage, and supply-chain domains.
+                AI platforms, cloud-native infrastructure, stakeholder alignment, and
+                measurable outcomes across consumer health, enterprise, and supply-chain domains.
               </p>
             </article>
           </div>
@@ -149,8 +180,8 @@
             <p class="eyebrow">Experience</p>
             <h2>Career trajectory</h2>
             <p>
-              A timeline shaped by forecasting science, modern data platforms, and
-              enterprise GenAI adoption.
+              A timeline shaped by AI engineering, agentic systems, GenAI platforms,
+              and enterprise ML adoption.
             </p>
           </div>
           <div class="timeline" id="experience-timeline"></div>
@@ -161,8 +192,8 @@
             <p class="eyebrow">Signature Work</p>
             <h2>What I build</h2>
             <p>
-              These workstreams show how I translate advanced models into business
-              movement, from competitive intelligence to generative analytics.
+              These workstreams show how I translate advanced AI models into business
+              movement — from agentic platforms to generative analytics.
             </p>
           </div>
           <div class="work-grid" id="signature-work-grid"></div>
@@ -173,16 +204,16 @@
             <p class="eyebrow">Capabilities</p>
             <h2>Skill architecture</h2>
             <p>
-              My stack covers the full path from experimentation to production, including
-              classic ML, deep learning, modern data engineering, and LLM-oriented
-              workflows.
+              My stack covers the full path from experimentation to production — spanning
+              GenAI, agentic AI, classical ML, deep learning, cloud infrastructure,
+              and LLM-oriented workflows.
             </p>
           </div>
           <div class="skills-layout">
             <div class="skills-galaxy tilt-card reveal" data-tilt-card>
               <div class="skills-galaxy__core">
+                <span>AI</span>
                 <span>ML</span>
-                <span>DL</span>
                 <span>LLM</span>
               </div>
               <div class="skills-galaxy__orbit skills-galaxy__orbit--one"></div>
@@ -211,21 +242,49 @@
         <section class="section contact-section" id="contact">
           <div class="contact-panel reveal">
             <p class="eyebrow">Contact</p>
-            <h2>Looking for someone who can bridge ML depth and business clarity?</h2>
+            <h2>Looking for someone who can bridge AI depth and business clarity?</h2>
             <p>
-              I’m open to conversations around senior data science, machine learning,
-              applied AI, forecasting, decision intelligence, and LLM product roles.
+              I'm open to conversations around Data Science, ML Engineering,
+              AI Engineering, Generative AI, Agentic AI, LLM Engineering, and
+              Applied AI/ML roles.
             </p>
             <div class="contact-links">
               <a class="button button--primary" href="mailto:debapratimdeka2001@gmail.com">
+                <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
                 Email Me
               </a>
-              <a class="button button--ghost" href="tel:+918634564246">Call Me</a>
+              <a
+                class="button button--ghost"
+                href="https://www.linkedin.com/in/debapratim-deka/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg class="button-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                LinkedIn
+              </a>
+              <a
+                class="button button--ghost"
+                href="https://github.com/Deba2602"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg class="button-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+                GitHub
+              </a>
+              <a class="button button--ghost" href="tel:+918638454246">
+                <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                Call Me
+              </a>
             </div>
-            <p class="contact-note">
-              Recruiter note: you can also add your exact LinkedIn and GitHub profile URLs
-              in the contact block inside the site data file.
-            </p>
           </div>
         </section>
       </main>

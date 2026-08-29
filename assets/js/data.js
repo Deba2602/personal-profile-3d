@@ -1,71 +1,105 @@
 export const profile = {
   name: "Debapratim Deka",
-  title: "Senior Data Scientist",
+  title: "Data Scientist & AI Engineer",
   location: "Bangalore, India",
   email: "debapratimdeka2001@gmail.com",
-  phone: "+91 86345 64246",
+  phone: "+91 8638454246",
   links: {
-    linkedin: "",
-    github: "",
+    LinkedIn: "https://www.linkedin.com/in/debapratim-deka/",
+    GitHub: "https://github.com/Deba2602",
   },
   summary:
-    "Senior Data Scientist with experience across competitive intelligence, forecasting, decision analytics, and enterprise GenAI systems. I build ML products that are business-aware, evaluation-driven, and production-minded.",
+    "Data Scientist & AI Engineer with 4+ years of experience architecting and productionizing ML, GenAI, LLM, and Agentic AI solutions across enterprise use cases — specializing in RAG, multi-agent systems, NL-to-SQL, and AI automation.",
 };
+
+export const targetRoles = [
+  "Data Scientist",
+  "Associate Lead Data Scientist",
+  "ML Engineer",
+  "AI Engineer",
+  "Generative AI Engineer",
+  "Agentic AI Engineer",
+  "LLM Engineer",
+  "Applied AI / ML",
+];
 
 export const experiences = [
   {
     company: "Sigmoid Analytics",
     location: "Bangalore",
-    role: "Senior Data Scientist",
-    duration: "Jan 2025 - Present",
+    role: "Associate Lead Data Scientist",
+    duration: "Jan 2026 – Present",
     description:
-      "Leading high-impact machine learning and GenAI initiatives for consumer health intelligence with a strong focus on scalable architecture and measurable business outcomes.",
+      "Leading AI solution architecture, technical development, and end-to-end delivery of enterprise AI platforms for a US consumer health company.",
     bullets: [
-      "Built large-scale, performant data pipelines for real-time competitive insights, contributing to a 20% revenue increase while reducing manual validation effort by 40%.",
-      "Designed a hybrid RAG framework enhanced with knowledge graphs for claims boosting and ingredient equivalency analysis, driving more scientifically grounded recommendations and a 23% revenue surge.",
-      "Aligned business strategy, data governance, and model deployment so analytics could move from reporting support to decision-driving infrastructure.",
+      "Architected and led a 3-member team to productionize an enterprise AI-powered Data Sufficiency platform, owning solution architecture, technical development, stakeholder alignment, and end-to-end delivery across UC Hydration, AI Summary, Entity Resolution, and Scoring services.",
+      "Designed and developed an agentic AI framework to extract and enrich enterprise data context including metadata, lineage, KPIs, business definitions, relationships, dimensions, and granularity; built a data-readiness scoring engine mapping business use-case requirements to available data.",
+      "Productionized the AI platform using cloud-native engineering practices with containerized services on Kubernetes/AKS, GitHub-based CI/CD, automated deployment, scalability, monitoring, and observability.",
+    ],
+  },
+  {
+    company: "Sigmoid Analytics",
+    location: "Bangalore",
+    role: "Senior Data Scientist",
+    duration: "Jan 2025 – Dec 2025",
+    description:
+      "Led high-impact GenAI initiatives including scientific claims strategy, multi-agent analytics, and AI code generation for consumer health and enterprise clients.",
+    bullets: [
+      "Curated an Ingredient+Literature Knowledge Base by mining scientific databases and competitor systems, reducing manual sourcing effort by 40%; developed hybrid RAG & CAG with Claims Bracketing and Ingredient Equivalency methodologies, driving a 20% revenue surge.",
+      "Architected a multi-agent GenAI analytics platform across 50+ enterprise tables spanning Sales, Finance, and Commercial domains with NL-to-SQL, query validation, KPI extraction, SQL self-correction, dynamic visualization, and domain-aware memory; reduced analysis turnaround by >99% and achieved ~87% chatbot accuracy.",
+      "Architected an agentic AI platform converting Figma screenshots and multi-page PDFs into production-ready React TypeScript applications, leveraging LLM routing, UI rule books, multi-page context, and critic–build validation loops; achieved 93% average visual similarity.",
     ],
   },
   {
     company: "Sigmoid Analytics",
     location: "Bangalore",
     role: "Data Scientist",
-    duration: "Jan 2024 - Dec 2024",
+    duration: "Jan 2024 – Dec 2024",
     description:
       "Worked across GenAI, attribution, and forecasting-oriented product analytics for enterprise clients in consumer health, alcoholic beverages, and food retail.",
     bullets: [
-      "Engineered scalable GenAI and RAG pipelines using fine-tuned language models across more than 10M reviews, accelerating insight generation by 30% and reaching 85% model accuracy.",
-      "Partnered with product stakeholders to convert analytical findings into business action, improving delivery productivity and decision clarity across client teams.",
-      "Implemented constraint-based regression and real-time analytics workflows to quantify the impact of pricing, promotion, media, macro trends, and weather on sales performance.",
-      "Built forecasting diagnostics and generative analytics utilities for 100K+ SKUs, improving operational speed, reporting efficiency, and LLM-assisted analysis quality.",
+      "Engineered a GenAI pipeline integrating LLM sentiment analysis and social listening, processing 10M+ reviews and accelerating claim generation by 30%; built a claim recommendation assistant using fine-tuned T5, BART, and GPT, achieving 85% accuracy.",
+      "Implemented a constraint-based regression model identifying sales depletion drivers across operations, macro trends, and weather data, achieving 89% accuracy across 50 US states.",
+      "Developed a GenAI-driven forecasting diagnostic solution using LangChain, LangGraph, ReAct, and FastAPI across 100K+ SKUs, improving diagnostic speed by 65% and accelerating reporting by 60%.",
     ],
   },
   {
     company: "Sigmoid Analytics",
     location: "Bangalore",
     role: "Associate Data Scientist",
-    duration: "Jul 2022 - Dec 2023",
+    duration: "Jul 2022 – Dec 2023",
     description:
-      "Started by solving large-scale demand forecasting and internal R&D challenges with a strong foundation in statistical modeling, experimentation, and optimization.",
+      "Solved large-scale demand forecasting and optimization challenges with strong foundations in statistical modeling, experimentation, and deep feature engineering.",
     bullets: [
-      "Constructed end-to-end ML pipelines for real-time forecasting across 100K+ SKUs using advanced forecasting models and deep feature engineering, improving prediction accuracy by 10.6%.",
-      "Developed high-velocity dashboards and predictive monitoring systems that helped business teams interpret SKU-level demand behavior with stronger confidence.",
-      "Created modular forecasting frameworks using statistical learning, Bayesian optimization, and intelligent deselection logic to improve robustness under uncertainty.",
-      "Designed custom loss functions for constrained demand scenarios, improving regression performance by 15% across volatile product lines.",
+      "Constructed scalable forecasting pipelines for 100K+ SKUs using Fourier transforms, Y-lags, and segmentation, boosting performance by 10.6% and achieving 82% system accuracy.",
+      "Optimized models using Optuna, Bayesian optimization, and volatility-based diagnostics; developed trend indicators in Databricks pipelines, boosting precision by 40% across high-variance segments.",
+      "Developed demand-type-specific models with classification routing and VAR-based pipelines, leveraging inter-SKU dependencies and Granger causality for lag optimization.",
+      "Devised a hybrid QLinEx loss function with asymmetric error penalization for constrained forecasting, improving regression fidelity by 15% across volatile product lines.",
     ],
   },
 ];
 
 export const signatureWork = [
   {
+    tag: "Agentic AI & AI Engineering",
+    title: "Enterprise AI Platforms",
+    description:
+      "I architect agentic AI systems that combine multi-agent orchestration, cloud-native infrastructure, and business logic into production-grade platforms.",
+    bullets: [
+      "AI-powered Data Sufficiency platform with Kubernetes/AKS",
+      "Figma-to-React code generation via LLM routing & critic loops",
+      "Multi-agent GenAI analytics with NL-to-SQL & self-correction",
+    ],
+  },
+  {
     tag: "LLM + Knowledge Systems",
     title: "Grounded GenAI for Consumer Health",
     description:
       "I combine retrieval, structured evidence, and domain knowledge to move LLM outputs from plausible language to defensible business recommendations.",
     bullets: [
-      "Hybrid RAG architecture with knowledge graph support",
+      "Hybrid RAG & CAG architecture with knowledge graph support",
       "Claims interpretation backed by scientific literature",
-      "Reasoning flows optimized for trust and business adoption",
+      "Fine-tuned T5, BART, GPT for domain-specific generation",
     ],
   },
   {
@@ -85,7 +119,7 @@ export const signatureWork = [
     description:
       "I build models that do more than score outcomes. They explain levers, expose tradeoffs, and connect prediction quality to commercial impact.",
     bullets: [
-      "Pricing, promotion, and media attribution analytics",
+      "Pricing, promotion, and media attribution across 50 US states",
       "Constraint-based regression for real-world operations",
       "Interactive outputs for leadership and stakeholder teams",
     ],
@@ -94,51 +128,132 @@ export const signatureWork = [
 
 export const skillGroups = [
   {
-    title: "Programming & Data",
-    description: "The implementation layer for experimentation, analysis, and scalable data workflows.",
-    items: ["Python", "R", "PySpark", "SQL", "MySQL", "Snowflake"],
-  },
-  {
-    title: "Cloud, Platforms & MLOps",
-    description: "The infrastructure layer that supports reliable pipelines and reproducible delivery.",
-    items: ["AWS", "Azure Databricks", "dbt", "MLflow", "Git", "Bitbucket", "FastAPI", "LangChain", "LangGraph"],
-  },
-  {
-    title: "ML, DL & LLM Stack",
-    description: "The modeling layer spanning classical methods, deep learning, and generative AI systems.",
+    title: "AI / GenAI / LLM",
+    description:
+      "The generative AI layer powering intelligent applications, agent orchestration, and knowledge-grounded systems.",
     items: [
-      "PyTorch",
+      "Generative AI",
+      "Agentic AI",
+      "Multi-Agent Systems",
+      "LLMs",
+      "RAG",
+      "CAG",
+      "Prompt Engineering",
+      "NL-to-SQL",
+      "LLM Orchestration",
+      "AI Code Generation",
+      "LLM Evaluation",
+      "NLP",
+      "T5",
+      "BART",
+      "GPT",
+      "Azure OpenAI",
+      "LangChain",
+      "LangGraph",
+      "ReAct",
+      "Vector Databases",
+      "Graph Databases",
+      "Knowledge Graphs",
+    ],
+  },
+  {
+    title: "Machine Learning",
+    description:
+      "The modeling layer spanning classical methods, deep learning, time series, and statistical inference.",
+    items: [
+      "Supervised & Unsupervised Learning",
+      "Deep Learning",
+      "Time Series Forecasting",
+      "Regression",
+      "Classification",
+      "Clustering",
+      "Feature Engineering",
+      "Hyperparameter Optimization",
+      "Bayesian Optimization",
+      "Statistical Modeling",
+      "Causal Analysis",
+      "Model Evaluation",
+    ],
+  },
+  {
+    title: "AI Engineering / MLOps",
+    description:
+      "The production infrastructure layer for reliable AI deployment, orchestration, and observability.",
+    items: [
+      "FastAPI",
+      "MLflow",
+      "Kubernetes",
+      "AKS",
+      "Docker",
+      "GitHub",
+      "GitHub Actions",
+      "CI/CD",
+      "Helm",
+      "Argo CD",
+      "Monitoring",
+      "Observability",
+    ],
+  },
+  {
+    title: "Data Engineering / Cloud",
+    description:
+      "The data and cloud infrastructure layer for scalable pipelines, governance, and storage.",
+    items: [
+      "Python",
+      "PySpark",
+      "SQL",
+      "MySQL",
+      "PostgreSQL",
+      "Snowflake",
+      "Databricks",
+      "Azure",
+      "AWS",
+      "Data Pipelines",
+      "Metadata Management",
+      "Data Lineage",
+      "Data Governance",
+    ],
+  },
+  {
+    title: "Libraries & Frameworks",
+    description:
+      "The foundational tools and packages powering analysis, modeling, and visualization workflows.",
+    items: [
+      "NumPy",
+      "Pandas",
+      "Scikit-learn",
+      "Matplotlib",
+      "Seaborn",
+      "Plotly",
+      "Statsmodels",
+      "NLTK",
+      "TextBlob",
+      "spaCy",
       "TensorFlow",
       "Keras",
-      "Scikit-learn",
-      "XGBoost",
-      "LightGBM",
-      "Transformers",
-      "RAG",
-      "Prompt Engineering",
-      "NLP",
-      "Hyperparameter Optimization",
     ],
   },
 ];
 
 export const metrics = [
-  { value: "20%", label: "Revenue increase from real-time competitive insight systems" },
-  { value: "23%", label: "Revenue surge linked to knowledge-guided claims intelligence" },
+  { value: "20%", label: "Revenue surge from knowledge-guided claims intelligence" },
+  { value: "87%", label: "Chatbot accuracy on multi-agent GenAI analytics platform" },
+  { value: "93%", label: "Visual similarity in Figma-to-React AI code generation" },
   { value: "10M+", label: "Reviews processed through GenAI and retrieval pipelines" },
   { value: "100K+", label: "SKUs analyzed across demand forecasting and diagnostics" },
+  { value: ">99%", label: "Reduction in analysis turnaround via NL-to-SQL agents" },
 ];
 
 export const education = {
   school: "National Institute of Technology Silchar",
-  degree: "B.Tech, Electronics and Communication Engineering",
-  duration: "Jul 2018 - Jul 2022",
-  score: "CGPA: 8.48",
+  degree: "B.Tech, Electrical Engineering",
+  duration: "Jul 2018 – Jul 2022",
+  score: "CGPA: 9.49",
 };
 
 export const awards = {
   title: "Three Consecutive SPOT Awards",
-  duration: "Q1 2023 - Q3 2024",
+  duration: "Q1 2023 – Q3 2024",
   description:
-    "Recognized for excellence in scalable forecasting, GenAI-powered solutions, and high-impact data science delivery.",
+    "Recognized for excellence in scalable forecasting, GenAI-powered assistants, and delivering innovative, high-impact data science solutions.",
 };
