@@ -6,6 +6,7 @@ import {
   profile,
   signatureWork,
   skillGroups,
+  targetRoles,
 } from "./data.js";
 
 const experienceTimeline = document.querySelector("#experience-timeline");
@@ -15,6 +16,8 @@ const impactMetrics = document.querySelector("#impact-metrics");
 const educationCard = document.querySelector("#education-card");
 const awardsCard = document.querySelector("#awards-card");
 const heroSocials = document.querySelector("#hero-socials");
+
+/* ── Component Factories ── */
 
 function createExperienceCard(item) {
   const article = document.createElement("article");
@@ -73,8 +76,10 @@ function createMetricCard(metric) {
   return article;
 }
 
+/* ── Populate Static Content ── */
+
 function populateStaticContent() {
-  document.title = `${profile.name} | 3D ML Profile`;
+  document.title = `${profile.name} | Data Scientist & AI Engineer — 3D Profile`;
 
   const socialEntries = Object.entries(profile.links).filter(([, url]) => url);
   if (heroSocials && socialEntries.length) {
@@ -109,6 +114,8 @@ function populateStaticContent() {
   `;
 }
 
+/* ── Reveal on Scroll ── */
+
 function setupRevealObserver() {
   const observer = new IntersectionObserver(
     (entries) => {
@@ -124,6 +131,8 @@ function setupRevealObserver() {
 
   document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
 }
+
+/* ── Tilt Cards ── */
 
 function setupTiltCards() {
   const cards = document.querySelectorAll("[data-tilt-card]");
@@ -144,6 +153,8 @@ function setupTiltCards() {
     });
   });
 }
+
+/* ── Background Network ── */
 
 function setupBackgroundNetwork() {
   const canvas = document.querySelector("#network-canvas");
@@ -224,7 +235,148 @@ function setupBackgroundNetwork() {
   });
 }
 
+/* ── Typewriter Animation ── */
+
+function setupTypewriter() {
+  const element = document.querySelector("#role-typewriter");
+  if (!element) return;
+
+  const roles = targetRoles;
+  let roleIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typeSpeed = 70;
+  const deleteSpeed = 40;
+  const pauseAfterType = 2000;
+  const pauseAfterDelete = 500;
+
+  function tick() {
+    const currentRole = roles[roleIndex];
+
+    if (!isDeleting) {
+      charIndex += 1;
+      element.textContent = currentRole.slice(0, charIndex);
+
+      if (charIndex === currentRole.length) {
+        setTimeout(() => {
+          isDeleting = true;
+          tick();
+        }, pauseAfterType);
+        return;
+      }
+      setTimeout(tick, typeSpeed);
+    } else {
+      charIndex -= 1;
+      element.textContent = currentRole.slice(0, charIndex);
+
+      if (charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(tick, pauseAfterDelete);
+        return;
+      }
+      setTimeout(tick, deleteSpeed);
+    }
+  }
+
+  tick();
+}
+
+/* ── Scroll Progress Bar ── */
+
+function setupScrollProgress() {
+  const bar = document.querySelector("#scroll-progress");
+  if (!bar) return;
+
+  function updateProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = `${progress}%`;
+  }
+
+  window.addEventListener("scroll", updateProgress, { passive: true });
+  updateProgress();
+}
+
+/* ── Animated Counters ── */
+
+function setupAnimatedCounters() {
+  const counters = document.querySelectorAll("[data-count-target]");
+  if (!counters.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.countTarget, 10);
+          const suffix = el.dataset.countSuffix || "";
+          animateCounter(el, target, suffix);
+          observer.unobserve(el);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  counters.forEach((counter) => observer.observe(counter));
+}
+
+function animateCounter(element, target, suffix) {
+  const duration = 1800;
+  const startTime = performance.now();
+
+  function step(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    // Ease out cubic
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.round(eased * target);
+    element.textContent = `${current}${suffix}`;
+
+    if (progress < 1) {
+      requestAnimationFrame(step);
+    }
+  }
+
+  requestAnimationFrame(step);
+}
+
+/* ── DD Monogram Interaction ── */
+
+function setupMonogramInteraction() {
+  const monogram = document.querySelector("#dd-monogram");
+  if (!monogram) return;
+
+  monogram.addEventListener("click", () => {
+    monogram.style.animation = "none";
+    // Force reflow
+    void monogram.offsetHeight;
+    monogram.style.animation = "";
+
+    // Quick spin effect
+    const chars = monogram.querySelectorAll(".dd-char");
+    chars.forEach((char, i) => {
+      char.style.transition = "transform 400ms cubic-bezier(0.68, -0.55, 0.265, 1.55)";
+      char.style.transform = `rotate(${360 * (i === 0 ? 1 : -1)}deg) scale(1.2)`;
+      setTimeout(() => {
+        char.style.transform = "";
+        setTimeout(() => {
+          char.style.transition = "";
+        }, 400);
+      }, 400);
+    });
+  });
+}
+
+/* ── Initialize ── */
+
 populateStaticContent();
 setupRevealObserver();
 setupTiltCards();
 setupBackgroundNetwork();
+setupTypewriter();
+setupScrollProgress();
+setupAnimatedCounters();
+setupMonogramInteraction();
